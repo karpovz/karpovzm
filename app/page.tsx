@@ -143,7 +143,8 @@ export default function Personal() {
         </div>
       </motion.section>
 
-      <motion.section
+      {PROJECTS.length > 0 &&
+        <motion.section
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
@@ -171,8 +172,10 @@ export default function Personal() {
           ))}
         </div>
       </motion.section>
-
-      <motion.section
+      }
+      
+      {WORK_EXPERIENCE.length > 0 &&
+        <motion.section
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
@@ -208,9 +211,11 @@ export default function Personal() {
             </a>
           ))}
         </div>
-      </motion.section>
-
-      <motion.section
+        </motion.section>
+      }
+      
+      {BLOG_POSTS.length > 0 && 
+        <motion.section
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
@@ -244,7 +249,9 @@ export default function Personal() {
             ))}
           </AnimatedBackground>
         </div>
-      </motion.section>
+        </motion.section>
+      }
+      
 
       <motion.section
         variants={VARIANTS_SECTION}
